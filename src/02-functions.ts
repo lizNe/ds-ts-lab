@@ -78,3 +78,21 @@ function findFriends(friendsArray: Friend[], criterion: (friend: Friend) => bool
 // Example usage:
 console.log(findFriends(friends, (friend) => friend.name.startsWith('Pa')));
 console.log(findFriends(friends, (friend) => friend.age < 35));
+
+
+
+// ------------------------Exercise------------------------------------
+
+function addInterest(friend: Friend, newInterest: string): string[] {
+    if (!friend.interests) {
+        // If the 'interests' property is undefined, create a new array
+        friend.interests = [];
+    }
+
+    friend.interests.push(newInterest);
+    return friend.interests;
+}
+
+// Example usage:
+console.log(addInterest(friends[0], 'Politics'));
+console.log(addInterest(friends[1], 'Reading')); // Assuming friends[1] has interests property
