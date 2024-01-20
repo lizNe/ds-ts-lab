@@ -6,13 +6,13 @@ interface Friend {
     age: number
 }
 
-const friend1 = {
+const friend1: Friend = {
     name: "Paul Fleming",
     phone: "087-12345",
     age: 25,
   };
   
-  const friend2 = {
+  const friend2: Friend = {
     name: "Jane Costello",
     phone: "086--12345",
     age: 31,
@@ -22,7 +22,17 @@ const friend1 = {
   console.log(friends[1]);
   
   //   -------------------
-  const colleague1 = {
+
+  interface Colleague {
+    name: string;
+    department: string;
+    contact: {
+        email: string;
+        extension:number;
+    };
+}
+
+  const colleague1: Colleague = {
     name: "Ralph Graham",
     department: "Engineering",
     contact: {
@@ -31,7 +41,7 @@ const friend1 = {
     },
   };
   
-  const colleague2 = {
+  const colleague2: Colleague = {
     name: "Patti Burke",
     department: "Finance",
     contact: {
@@ -40,7 +50,7 @@ const friend1 = {
     },
   };
   
-  const colleague3 = {
+  const colleague3: Colleague = {
     name: "Dean Sullivan",
     department: "HR",
     contact: {
